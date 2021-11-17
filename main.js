@@ -53,6 +53,7 @@ function selectAnswer(e) {
   Array.from(answerButtonElements.children).forEach((button) => {
     setStatusClass(button, button.dataset.correct);
   });
+  console.log(currentQuestionIndex,questions.length)
  nextButton.classList.remove('hide')
 }
 
