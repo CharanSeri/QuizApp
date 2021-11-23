@@ -6,10 +6,10 @@ const answerButtonElements = document.getElementById("answer-buttons");
 let currentQuestionIndex;
 
 startButton.addEventListener("click", startGame);
-nextButton.addEventListener('click',()=>{
-    currentQuestionIndex++;
-    setNextQuestion()
-})
+nextButton.addEventListener("click", () => {
+  currentQuestionIndex++;
+  setNextQuestion();
+});
 
 function startGame() {
   console.log("Started");
@@ -53,8 +53,8 @@ function selectAnswer(e) {
   Array.from(answerButtonElements.children).forEach((button) => {
     setStatusClass(button, button.dataset.correct);
   });
-  console.log(currentQuestionIndex,questions.length)
- nextButton.classList.remove('hide')
+  if (currentQuestionIndex < questions.length - 1)
+    nextButton.classList.remove("hide");
 }
 
 function setStatusClass(element, correct) {
@@ -92,8 +92,10 @@ const questions = [
         correct: false,
       },
     ],
-  }, {
-    question: "How Much revenue does Facebook targeted ads generate in US Dollars?",
+  },
+  {
+    question:
+      "How Much revenue does Facebook targeted ads generate in US Dollars?",
     answers: [
       {
         text: "108.6 Billion",
@@ -110,6 +112,70 @@ const questions = [
       {
         text: "21.5 Billion",
         correct: false,
+      },
+    ],
+  },
+  {
+    question:
+      "What Other Companies are Involved in Meta?",
+    answers: [
+      {
+        text: "MicroSoft,Nvidia",
+        correct: true,
+      },
+      {
+        text: "apple,MicroSoft",
+        correct: false,
+      },
+      {
+        text: "Dell,apple",
+        correct: false,
+      },
+      {
+        text: "Samsung,Instagram",
+        correct: false,
+      },
+    ],
+  },{
+    question:
+      "What SDK's are Introduced for Meta?",
+    answers: [
+      {
+        text: "PresencePlatform",
+        correct: false,
+      },
+      {
+        text: "Interaction, Cambria",
+        correct: true,
+      },
+      {
+        text: "Monterey, Guestier",
+        correct: false,
+      },
+      {
+        text: "Hand Signels,Wave",
+        correct: false,
+      },
+    ],
+  },{
+    question:
+      "What the Name of Main Project with Augmented reality from Meta?",
+    answers: [
+      {
+        text: "Multi Verse",
+        correct: false,
+      },
+      {
+        text: "Beta",
+        correct: false,
+      },
+      {
+        text: "Zeus",
+        correct: false,
+      },
+      {
+        text: "Azure",
+        correct: true,
       },
     ],
   },
