@@ -73,6 +73,27 @@ function clearStatusClass(element) {
 
 const questions = [
   {
+    question: "What Exactly is Meta",
+    answers: [
+      {
+        text: "New App from Facebook",
+        correct: false,
+      },
+      {
+        text: "Child Company from Facebook",
+        correct: false,
+      },
+      {
+        text: "A parent company for FaceBook,Whatsapp,Instagram",
+        correct: true,
+      },
+      {
+        text: "New Meeting and Group Chat App",
+        correct: false,
+      },
+    ],
+  },
+  {
     question: "What Data Does FaceBook Collect",
     answers: [
       {
